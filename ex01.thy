@@ -51,23 +51,4 @@ theorem "reverse (reverse xs) = xs"
    apply (auto simp add: reverse_snoc)
   done
 
-fun reverse_helper::"'a list \<Rightarrow> 'a list \<Rightarrow> 'a list" where
-"reverse_helper ys [] = ys" |
-"reverse_helper ys (x # xs) = reverse_helper (x # ys) xs"
-
-fun reverse'::"'a list \<Rightarrow> 'a list" where
-  "reverse' xs = reverse_helper [] xs"
-
-value "reverse' [1,2,3::nat]"
-
-lemma reverse_helper_lem: "reverse_helper [] (reverse_helper ys xs) = reverse_helper xs ys"
-  apply (induct xs arbitrary: ys)
-   apply auto
-  done
-
-
-lemma "reverse' (reverse' xs) = xs"
-  apply(induct xs)
-   apply (auto simp: reverse_helper_lem)
-  done
 end
