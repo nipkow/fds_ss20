@@ -6,5 +6,6 @@
 |prog-prove.pdf: |Isabelle tutorial (for Part I)|
 |Demos:|Demo theories (for Part I)|
 |slides-fds.pdf:|Slides for (Part II) (under construction)|
+|book-fds.pdf:|Book for (Part II) (work in progress!)|
 |Thys:|Theories for (Part II) (under construction)|
 |Homeworks:|Homeworks and tutorial exercises|
